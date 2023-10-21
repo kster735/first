@@ -1,5 +1,5 @@
 name: DeployFirstSveltkitCpanel
-
+# https://appimate.medium.com/cicd-with-cpanel-and-github-c6a3a5560821
 on:
   push:
     branches:
@@ -15,5 +15,10 @@ jobs:
       uses: actions/chekout@v2
 
     - name: Sync files
-      uses: SamKirkland/
+      uses: SamKirkland/sddjdj
+      with:
+        server: ftp.iflexico
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        server-dir: /
       
